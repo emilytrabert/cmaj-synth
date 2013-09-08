@@ -1,0 +1,43 @@
+#N canvas 629 22 516 479 10;
+#X obj 240 390 *~;
+#X obj 240 440 dac~;
+#X obj 255 98 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 255 355 vline~;
+#X msg 255 325 1 500 \, 0.7 500 500 \, 0 500 1500;
+#X msg 137 129 list 261.6 293.7 329.6 349.2 392 440 493.9;
+#X obj 137 156 t l l;
+#X obj 164 185 list length;
+#X obj 164 210 t b i;
+#X obj 164 237 random;
+#X obj 137 262 list split;
+#X obj 165 293 list split 1;
+#X obj 255 70 metro 1500;
+#X obj 165 325 osc~ 261.6;
+#X text 331 70 Runs every 1.5 seconds.;
+#X text 28 157 Randomly selects a note from the C maj / A min scale.
+;
+#X text 273 256 Attack duration of 0.5 secs. Decay duration of 0.5
+secs. Sustain 0.5 ses. Release after a total of 1.5 secs.;
+#X text 27 21 Emily Trabert ATEC 321 Assignment 1 - Simple Synth;
+#X obj 255 43 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X text 254 19 Click to start.;
+#X connect 0 0 1 1;
+#X connect 0 0 1 0;
+#X connect 2 0 4 0;
+#X connect 2 0 5 0;
+#X connect 3 0 0 1;
+#X connect 4 0 3 0;
+#X connect 5 0 6 0;
+#X connect 6 0 10 0;
+#X connect 6 1 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 8 1 9 1;
+#X connect 9 0 10 1;
+#X connect 10 1 11 0;
+#X connect 11 0 13 0;
+#X connect 12 0 2 0;
+#X connect 13 0 0 0;
+#X connect 18 0 12 0;
